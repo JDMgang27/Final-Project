@@ -2,14 +2,13 @@ package com.jdmgang.remindly;
 
 
 import android.content.Context;
-import android.provider.CalendarContract;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-@Database(entities = {UsernamePassword.class, CalendarContract.Reminders.class},version = 1)
+@Database(entities = {UsernamePassword.class,Reminders.class},version = 1)
 @TypeConverters({DateTypeConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
 

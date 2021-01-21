@@ -1,7 +1,6 @@
 package com.jdmgang.remindly;
 
 
-import android.provider.CalendarContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,3 +55,4 @@ public class AdapterReminders extends RecyclerView.Adapter<AdapterReminders.MyVi
     }
 
 }
+

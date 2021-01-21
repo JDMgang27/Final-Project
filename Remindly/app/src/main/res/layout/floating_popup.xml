@@ -4,7 +4,7 @@
     android:layout_width="300dp"
     android:layout_height="350dp"
     android:orientation="vertical"
-    android:background="#CCCCFF"
+    android:background="#7E7E7E"
     android:layout_gravity="center"
     android:padding="25dp">
 
@@ -21,6 +21,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:hint="Date And Time"
+            android:textColor="@color/black"
             android:layout_gravity="center"/>
         <Button
             android:id="@+id/selectDate"
@@ -39,6 +40,7 @@
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:hint="Message"
+        android:textColor="@color/black"
         android:gravity="center"/>
 
     <Button
