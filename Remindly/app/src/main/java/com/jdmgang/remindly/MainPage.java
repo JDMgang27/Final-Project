@@ -99,7 +99,7 @@ public class MainPage extends AppCompatActivity {
                                     Toast.makeText(MainPage.this,"Invalid time",Toast.LENGTH_SHORT).show();
 
                             }
-                        },newTime.get(Calendar.HOUR_OF_DAY),newTime.get(Calendar.MINUTE),true);
+                        },newTime.get(Calendar.HOUR),newTime.get(Calendar.MINUTE),false);
                         time.show();
 
                     }
@@ -126,7 +126,7 @@ public class MainPage extends AppCompatActivity {
                 reminders = l.get(l.size()-1);
                 Log.e("ID chahiye",reminders.getId()+"");
 
-                Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT+5:30"));
+                Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT+8:00"));
                 calendar.setTime(remind);
                 calendar.set(Calendar.SECOND,0);
                 Intent intent = new Intent(MainPage.this,NotifierAlarm.class);
