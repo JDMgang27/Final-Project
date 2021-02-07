@@ -21,6 +21,7 @@ public interface RoomDAO {
     @Delete
     public void Delete(UsernamePassword usernamePassword);
 
+
     @Query("Select * from login where usename = :username")
     public UsernamePassword getUserwithUsername(String username);
 
@@ -37,6 +38,7 @@ public interface RoomDAO {
     @Delete
     public void Delete(Reminders reminders);
 
+
     @Query("Select * from reminder order by remindDate")
     public List<Reminders> orderThetable();
 
@@ -45,5 +47,6 @@ public interface RoomDAO {
 
     @Query("Select * from reminder")
     public List<Reminders> getAll();
+
 
 }

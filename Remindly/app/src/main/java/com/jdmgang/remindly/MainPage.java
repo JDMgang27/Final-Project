@@ -38,6 +38,7 @@ public class MainPage extends AppCompatActivity {
     private AdapterReminders adapter;
     private List<Reminders> temp;
     private TextView empty;
+    private Button delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +46,11 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         appDatabase = AppDatabase.geAppdatabase(MainPage.this);
-
+        delete= findViewById( R.id.deleteBtn );
         add = findViewById(R.id.floatingButton);
         empty = findViewById(R.id.empty);
+
+
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,5 +165,16 @@ public class MainPage extends AppCompatActivity {
         adapter = new AdapterReminders(temp);
         recyclerView.setAdapter(adapter);
 
+    }
+
+
+    public void deleteReminder(View view) {
+
+        RoomDAO roomDAO = appDatabase.getRoomDAO();
+        Reminders reminder = new Reminders();
+        int ID = reminder.getId();
+        reminder.setId( ID );
+        roomDAO.Delete(reminder);
+        Toast.makeText( MainPage.this, "Delete Clicked",Toast.LENGTH_SHORT ).show();
     }
 }

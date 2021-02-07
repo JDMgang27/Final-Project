@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="305dp"
-        android:layout_height="300dp"
+        android:layout_width="205dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.447"
-        app:srcCompat="@drawable/remindy_logo" />
+        app:srcCompat="@drawable/remindly_new" />
 </androidx.constraintlayout.widget.ConstraintLayout>
