@@ -48,15 +48,6 @@
                     android:gravity="center"
                     android:layout_weight="1"/>
 
-                <ImageView
-                    android:id="@+id/deleteBtn"
-                    android:layout_width="30dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="330dp"
-                    android:src="@drawable/ic_baseline_delete_24"
-                    android:onClick="deleteReminder"
-                    android:text="Delete"
-                    android:textSize="11sp" />
 
 
 

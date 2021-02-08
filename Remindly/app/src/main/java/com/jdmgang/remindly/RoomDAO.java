@@ -36,7 +36,7 @@ public interface RoomDAO {
     public void Update(Reminders... reminders);
 
     @Delete
-    public void Delete(Reminders reminders);
+    public void Delete(Reminders... reminders);
 
 
     @Query("Select * from reminder order by remindDate")

@@ -48,14 +48,14 @@ public class NotifierAlarm extends BroadcastReceiver {
 
         NotificationChannel channel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            channel = new NotificationChannel("my_channel_01","hello", NotificationManager.IMPORTANCE_HIGH);
+            channel = new NotificationChannel("Reminder","remind", NotificationManager.IMPORTANCE_HIGH);
         }
 
         Notification notification = builder.setContentTitle("Reminder")
                 .setContentText(intent.getStringExtra("Message")).setAutoCancel(true)
-                .setSound(alarmsound).setSmallIcon(R.mipmap.ic_launcher_round)
+                .setSound(alarmsound).setSmallIcon(R.drawable.remindly_new)
                 .setContentIntent(intent2)
-                .setChannelId("my_channel_01")
+                .setChannelId("Reminder")
                 .build();
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
