@@ -33,7 +33,7 @@ public class NotifierAlarm extends BroadcastReceiver {
         roomDAO.Delete(reminder);
         AppDatabase.destroyInstance();
 
-        Uri alarmsound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        Uri alarmsound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
 
         Intent intent1 = new Intent(context,MainPage.class);
         intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
